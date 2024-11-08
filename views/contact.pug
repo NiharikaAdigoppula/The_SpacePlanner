@@ -1,0 +1,62 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Booking Confirmation - The Space Planner
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    link(rel="stylesheet", href="assests/css/confirmation.css")
+
+  body
+    header
+      .logo
+        img(src="assests/img/logo.png", alt="Company Logo")
+      h1.header-title The Space Planner
+      nav
+        ul
+         a(href="/index") Home
+          a(href="/register") Register
+          a(href="/login") Login
+          a(href="/about") About Us
+          a(href="/contact") Contact
+
+    main
+      .centered-container
+        h2 Booking Confirmation
+        p Thank you for your booking!
+        p Your service has been successfully booked.
+        p We will contact you soon with the details.
+        p If you have any questions, feel free to reach out to us.
+        button.submit-button(onclick="window.location.href='index.html'") Go to Home
+
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+         a(href="/index") Home
+          a(href="/register") Register
+          a(href="/login") Login
+          a(href="/about") About Us
+          a(href="/contact") Contact
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i.fab.fa-facebook
+            a(href="#")
+              i.fab.fa-twitter
+            a(href="#")
+              i.fab.fa-instagram
+
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Get the latest deals and offers directly in your inbox!
+          form(action="subscription.html", method="get")
+            input(type="email", name="email", placeholder="Enter your email", required)
+            button(type="submit") Subscribe
+
+      .copyright
+        p &copy; 2024 The Space Planner. All rights reserved.
+
+    script(src="assests/js/script.js")

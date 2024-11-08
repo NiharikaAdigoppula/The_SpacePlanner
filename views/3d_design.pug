@@ -1,0 +1,279 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    title 3D Visualizations - The Space Planner
+    style.
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: url('assests/img/interior-background.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+      }
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #2c3e50;
+        color: #fff;
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .header-title {
+        font-size: 24px;
+        text-align: center;
+        flex-grow: 1;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      nav ul li a:hover {
+        color: #3498db;
+      }
+      .visualization-main {
+        width: 100%;
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .visualization-content {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 800px;
+      }
+      .visualization-content h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #2c3e50;
+      }
+      .visualization-content p {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+      .visualization-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .visualization-gallery .image-container {
+        width: calc(33.333% - 20px);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        height: 300px;
+      }
+      .visualization-gallery .image-container img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+      }
+      @media (max-width: 768px) {
+        .visualization-gallery .image-container {
+          width: calc(50% - 20px);
+        }
+      }
+      @media (max-width: 480px) {
+        .visualization-gallery .image-container {
+          width: 100%;
+        }
+      }
+      footer {
+        background: #2c3e50;
+        color: #FFEB55;
+        padding: 40px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      footer .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 80%;
+      }
+      footer .footer-column {
+        width: 30%;
+        padding: 10px;
+      }
+      footer h3 {
+        margin-bottom: 15px;
+        color: #FFEB55;
+      }
+      footer ul {
+        list-style: none;
+      }
+      footer ul li {
+        margin-bottom: 10px;
+      }
+      footer ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      footer ul li a:hover {
+        color: #FFEB55;
+      }
+      footer .social-icons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+      }
+      footer .social-icons a {
+        color: #fff;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+      }
+      footer .social-icons a:hover {
+        color: #FFEB55;
+      }
+      footer .newsletter {
+        text-align: center;
+      }
+      footer input[type="email"] {
+        padding: 10px;
+        width: 80%;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: none;
+      }
+      footer button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #D91656;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      footer button[type="submit"]:hover {
+        background-color: #EE66A6;
+      }
+      footer .copyright {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 768px) {
+        footer .footer-column {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        footer .footer-container {
+          justify-content: center;
+        }
+      }
+  body
+    // Header
+    header
+      .logo
+        img(src="/assests/img/logo.png" alt="Company Logo")
+      h1.header-title The Space Planner
+      nav
+        ul
+         a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+          form(action="/index", method="get")
+            button.logout Logout
+    // Main Content
+    main.visualization-main(style="background-image: url('3d_background.jpg'); background-size: cover; background-position: center;")
+      section.visualization-content
+        h2 3D Visualizations
+        p At The Space Planner, our 3D visualization services give you a realistic preview of your future space. See how your designs will look in a lifelike environment before any construction begins.
+        // 3D Image Gallery
+        .visualization-gallery
+          .image-container
+            img(src="assests/img/3d_design1.jpg" alt="3D Visualization 1")
+          .image-container
+            img(src="assests/img/3d_image2.jpg" alt="3D Visualization 2")
+          .image-container
+            img(src="assests/img/3d_image3.jpg" alt="3D Visualization 3")
+          .image-container
+            img(src="assests/img/3d_image4.jpg" alt="3D Visualization 4")
+          .image-container
+            img(src="assests/img/3d_image5.jpg" alt="3D Visualization 5")
+          .image-container
+            img(src="assests/img/3d_image6.jpg" alt="3D Visualization 6")
+          .image-container
+            img(src="assests/img/3d_image7.jpg" alt="3D Visualization 7")
+          .image-container
+            img(src="assests/img/3d_image8.jpg" alt="3D Visualization 8")
+          .image-container
+            img(src="assests/img/3d_image9.jpg" alt="3D Visualization 9")
+    // Popup for Book Now
+    #popup.popup(style="display:none;")
+      .popup-content
+        span.close(onclick="closePopup()") &times;
+        h2 If you want this design, book now!
+        button(onclick="redirectToBookNow()") Book now
+    // Footer
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+         a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+          form(action="/index", method="get")
+            button.logout Logout
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#") i.fab.fa-facebook
+            a(href="#") i.fab.fa-twitter
+            a(href="#") i.fab.fa-instagram
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Get the latest deals and offers directly in your inbox!
+          form(action="subscription.html" method="get")
+            input(type="email" name="email" placeholder="Enter your email" required)
+            button(type="submit") Subscribe
+      .copyright
+        p &copy; 2024 The Space Planner. All rights reserved.
+    script(src="assests/js/newscript.js")

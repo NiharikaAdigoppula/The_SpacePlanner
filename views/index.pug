@@ -1,0 +1,103 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Our Services - The Space Planner
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    link(rel="stylesheet", href="assests/css/styles.css")
+  body
+    header
+      .logo
+        img(src="assests/img/logo.png", alt="Company Logo")
+      h1.header-title The Space Planner
+      nav
+        ul
+          a(href="/index") Home
+          a(href="/register") Register
+          a(href="/login") Login
+          a(href="/about") About Us
+          a(href="/contact") Contact
+
+    // Welcome Container
+    .welcome-container
+      h2 Welcome to The Space Planner
+      p Your dream space is just a step away. Discover the latest trends and ideas in interior design.
+      button(onclick="showPopup()") Login
+      button(onclick="showPopup()") Register
+
+    // Interior Sections (Visible on scroll)
+    .centered-container
+      h2.interior-heading OUR DESIGNS
+      
+      .interior-sections
+        .section(onclick="showPopup()")
+          .title-overlay Living Room
+          img(src="assests/img/living-room.jpg", alt="Living Room")
+        .section(onclick="showPopup()")
+          .title-overlay Bedroom
+          img(src="assests/img/bedroom.jpg", alt="Bedroom")
+        .section(onclick="showPopup()")
+          .title-overlay Kids-Bedroom
+          img(src="assests/img/kids-room.jpg", alt="Bedroom")
+        .section(onclick="showPopup()")
+          .title-overlay Officeroom
+          img(src="assests/img/office.jpg", alt="Officeroom")
+        .section(onclick="showPopup()")
+          .title-overlay Dining
+          img(src="assests/img/dining.jpg", alt="Dining")
+        .section(onclick="showPopup()")
+          .title-overlay Bathroom
+          img(src="assests/img/bathroom.jpg", alt="Bathroom")
+        .section(onclick="showPopup()")
+          .title-overlay Kitchen
+          img(src="assests/img/kitchen.jpg", alt="Kitchen")
+        .section(onclick="showPopup()")
+          .title-overlay Washing Area
+          img(src="assests/img/washing-room.jpg", alt="Washing Area")
+        .section(onclick="showPopup()")
+          .title-overlay Balcony
+          img(src="assests/img/balcony.jpg", alt="Balcony")
+
+    // Popup for Login/Register
+    #popup.popup
+      .popup-content
+        span.close(onclick="closePopup()") &times;
+        h2 Please Login or Register
+        button(onclick="redirectToLogin()") Login
+        button(onclick="redirectToRegister()") Register
+
+    footer
+      .footer-container
+        // Column 1: Quick Links
+        .footer-column
+          h3 Quick Links
+          ul
+           a(href="/index") Home
+          a(href="/register") Register
+          a(href="/login") Login
+          a(href="/about") About Us
+          a(href="/contact") Contact
+        // Column 2: Social Media Links
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#") 
+              i.fab.fa-facebook
+            a(href="#") 
+              i.fab.fa-twitter
+            a(href="#") 
+              i.fab.fa-instagram
+
+        // Column 3: Newsletter Subscription
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Get the latest deals and offers directly in your inbox!
+          form(action="subscription.html", method="get")
+            input(type="email", name="email", placeholder="Enter your email", required)
+            button(type="submit") Subscribe
+
+      .copyright
+        p &copy; 2024 The Space Planner. All rights reserved.
+
+    script(src="assests/js/script.js")

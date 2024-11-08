@@ -1,0 +1,114 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Commercial Design - The Space Planner
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    link(rel="stylesheet" href="assests/css/commercial.css")
+  
+  body
+    // Main container that holds all sections
+    .container
+      // Header
+      header
+        .logo
+          img(src="assests/img/logo.png" alt="Company Logo")
+        h1.header-title The Space Planner
+        nav
+          ul
+         a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+          form(action="/index", method="get")
+            button.logout Logout
+      // Main content
+      main
+        // Services Section - Displays at the top
+        section.services
+          h2 Our Commercial Design Services
+          .services-grid
+            // Service Items
+            each service in [
+              {img: "service1.jpg", title: "Office Space Planning", description: "Optimize your office layout for productivity and aesthetics."},
+              {img: "service2.jpg", title: "Retail Store Design", description: "Create a vibrant retail environment that engages customers."},
+              {img: "service3.jpg", title: "Restaurant Interiors", description: "Design modern, inviting restaurant spaces that attract diners."},
+              {img: "service4.jpg", title: "Corporate Branding Spaces", description: "Integrate your brand identity into your office design."},
+              {img: "service5.jpg", title: "Healthcare Facility Design", description: "Design efficient, welcoming spaces for healthcare providers."},
+              {img: "service6.jpg", title: "Custom Furniture Solutions", description: "Create tailored furniture to complement your interior design."},
+              {img: "service7.jpg", title: "Exhibition and Event Spaces", description: "Design functional, creative spaces for exhibitions and events."},
+              {img: "service8.jpg", title: "Hospitality Design", description: "Craft luxurious, comfortable interiors for hotels and resorts."},
+              {img: "service9.jpg", title: "Lighting Design", description: "Design and implement custom lighting solutions for any space."},
+              {img: "service10.jpg", title: "Residential Design", description: "Create personalized home designs that reflect your lifestyle."},
+              {img: "service11.jpg", title: "Green Building Design", description: "Incorporate sustainable practices into your building design for energy efficiency."},
+              {img: "service12.jpg", title: "Interior Renovation", description: "Transform existing spaces with innovative renovation solutions."}
+            ]
+              .service-item
+                .section(onclick="showPopup()")
+                  img(src=`assests/img/${service.img}` alt=`${service.title} Image`)
+                  h3 #{service.title}
+                p #{service.description}
+          
+          p At The Space Planner, we understand that a well-designed commercial space not only enhances functionality but also reflects the brand identity and values of your business. Our team of expert designers specializes in creating office spaces, retail stores, and other commercial environments that are both aesthetically pleasing and optimized for productivity.
+
+          h3 Our Approach
+          p We begin each project by closely understanding your business requirements, target audience, and spatial constraints. Whether it's a modern, minimalist office or a vibrant retail space, we customize our design solutions to align with your vision and business goals.
+
+          h3 What We Offer
+          ul
+            li Space Planning and Layout Design
+            li Custom Furniture and Fixture Selection
+            li Lighting Design and Implementation
+            li Brand Integration and Visual Identity
+            li 3D Visualizations and Concept Design
+
+          h3 Past Projects
+          p We have successfully completed numerous commercial design projects for small startups, established corporations, and retail outlets. Check out our 
+            a(href="portfolio.html") Portfolio
+            | to see some of our recent work.
+
+          h3 Contact Us
+          p Ready to transform your business space? 
+            a(href="contact.html") Contact us 
+            | today to discuss your project!
+
+      // Popup for Book Now
+      #popup.popup(style="display:none;")
+        .popup-content
+          span.close(onclick="closePopup()") &times;
+          h2 If you want this design, book now!
+          button(onclick="redirectToBookNow()") Book now
+
+      // Footer
+      footer
+        .footer-container
+          .footer-column
+            h3 Quick Links
+            ul
+             a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+          form(action="/index", method="get")
+            button.logout Logout
+          .footer-column
+            h3 Follow Us
+            .social-icons
+              a(href="#") i.fab.fa-facebook
+              a(href="#") i.fab.fa-twitter
+              a(href="#") i.fab.fa-instagram
+          .footer-column.newsletter
+            h3 Subscribe to Our Newsletter
+            p Get the latest deals and offers directly in your inbox!
+            form(action="subscription.html" method="get")
+              input(type="email" name="email" placeholder="Enter your email" required)
+              button(type="submit") Subscribe
+        .copyright
+          p &copy; 2024 The Space Planner. All rights reserved.
+
+    script(src="assests/js/script.js")

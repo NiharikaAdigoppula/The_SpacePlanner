@@ -1,0 +1,81 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title The Space Planner
+    link(rel="stylesheet", href="assests/css/style.css")
+    link(rel="stylesheet", href="assests/css/user.css")
+
+  body
+    // Header Section
+    header
+      .logo-container
+        img.logo(src="assests/img/logo.png", alt="The Space Planner Logo")
+      h1.site-title The Space Planner
+      nav
+        ul
+         a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+          form(action="/index", method="get")
+            button.logout Logout
+
+    // Main Content Area
+    .main-content
+      .welcome-container#welcomeContainer
+        h1 Welcome to SpacePlanner
+        p We specialize in interior designing. Select an option from the menu above to explore our services.
+        p Your dream space is just a step away. Discover the latest trends and ideas in interior design.
+        form(action="account.html", method="get")
+          button.my.account Profile
+        form(action="index.html", method="get")
+          button.logout Logout
+
+    script.
+      function loadContent() {
+          // Hide the welcome container
+          document.getElementById('welcomeContainer').style.display = 'none';
+          // Show the iframe
+          document.getElementById('contentFrame').style.display = 'block';
+      }
+
+    // Footer
+    footer
+      .footer-container
+        // Column 1: Quick Links
+        .footer-column
+          h3 Quick Links
+          ul
+              a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+        // Column 2: Social Media Links
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i.fab.fa-facebook
+            a(href="#")
+              i.fab.fa-twitter
+            a(href="#")
+              i.fab.fa-instagram
+
+        // Column 3: Newsletter Subscription
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Get the latest deals and offers directly in your inbox!
+          form(action="subscription.html", method="get")
+            input(type="email", name="email", placeholder="Enter your email", required)
+            button(type="submit") Subscribe
+
+      .copyright
+        p &copy; 2024 The Space Planner. All rights reserved.
+
+    script(src="assests/js/script.js")

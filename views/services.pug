@@ -1,0 +1,87 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Our Services - The Space Planner
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    link(rel="stylesheet", href="assets/css/styles.css") // Corrected 'assests' to 'assets'
+  body
+    header
+      .logo
+        img(src="assets/img/logo.png", alt="Company Logo")
+      h1.header-title The Space Planner
+      nav
+        ul
+       a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+          form(action="/index", method="get")
+            button.logout Logout
+    // Main Content
+    main
+      // Services Section
+      section.services-container
+        h2 Our Services
+        p At The Space Planner, we provide a variety of services to help you create the space of your dreams.
+
+        .services-grid
+          // Service 1: Residential Design
+          .service-item
+            a(href="residential.html")
+              img(src="assets/img/residential.jpg", alt="Residential Design Image")
+              h3 Residential Design
+            p Transforming your house into a beautiful home with our expert design services. // Updated description
+
+          // Service 2: Commercial Design
+          .service-item
+            a(href="commercial_design.html")
+              img(src="assets/img/commercial.jpg", alt="Commercial Design Image")
+              h3 Commercial Design
+            p Our expertise extends to office spaces, retail stores, and other commercial environments.
+
+          // Service 3: 3D Visualizations
+          .service-item
+            a(href="3d_design.html")
+              img(src="assets/img/3d_visualizations.jpg", alt="3D Visualization Image")
+              h3 3D Visualizations
+            p Get a glimpse of your future space with our 3D visualization services.
+
+    // Footer (common across all pages)
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+           a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+          form(action="/index", method="get")
+            button.logout Logout
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#") 
+              i.fab.fa-facebook
+            a(href="#") 
+              i.fab.fa-twitter
+            a(href="#") 
+              i.fab.fa-instagram
+
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Get the latest deals and offers directly in your inbox!
+          form(action="subscription.html", method="get")
+            input(type="email", name="email", placeholder="Enter your email", required)
+            button(type="submit") Subscribe
+
+      .copyright
+        p &copy; 2024 The Space Planner. All rights reserved.
+
+    script(src="assets/js/newscript.js") // Corrected 'assests' to 'assets'

@@ -1,0 +1,81 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Our Services - The Space Planner
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    link(rel="stylesheet", href="assests/css/styles.css")
+
+  body
+    header
+      .logo
+        img(src="assests/img/logo.png", alt="Company Logo")
+      h1.header-title The Space Planner
+      nav
+        ul
+         a(href="/index") Home
+          a(href="/register") Register
+          a(href="/login") Login
+          a(href="/about") About Us
+          a(href="/contact") Contact
+    main
+      .auth-container
+        h2 Login
+        form#login-form
+          label(for="login-email") Email:
+          input#login-email(type="email", required)
+          span#error-email.error-message
+
+          label(for="login-password") Password:
+          input#login-password(type="password", required)
+          span#error-password.error-message
+
+          .forgot-password
+            a(href="forgot-password.html") Forgot Password?
+
+          .button-container
+            button(type="submit") Login
+            button(type="reset") Reset
+
+        .register-link
+          p Don't have an account?
+          a(href="register.html") Register here
+
+    script(src="assests/js/newscript.js")
+
+    footer
+      .footer-container
+        //- Column 1: Quick Links
+        .footer-column
+          h3 Quick Links
+          ul
+          a(href="/index") Home
+          a(href="/register") Register
+          a(href="/login") Login
+          a(href="/about") About Us
+          a(href="/contact") Contact
+
+        //- Column 2: Social Media Links
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i.fab.fa-facebook
+            a(href="#")
+              i.fab.fa-twitter
+            a(href="#")
+              i.fab.fa-instagram
+
+        //- Column 3: Newsletter Subscription
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Get the latest deals and offers directly in your inbox!
+          form(action="subscription.html", method="get")
+            input(type="email", name="email", placeholder="Enter your email", required)
+            button(type="submit") Subscribe
+
+      .copyright
+        p &copy; 2024 The Space Planner. All rights reserved.
+
+    script(src="assests/js/script.js")

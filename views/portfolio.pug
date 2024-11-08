@@ -1,0 +1,116 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Our Services - The Space Planner
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    link(rel="stylesheet", href="assests/css/styles.css")
+
+  body
+    header
+      .logo
+        img(src="assests/img/logo.png", alt="Company Logo")
+      h1.header-title The Space Planner
+      nav
+        ul
+          a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+          form(action="/index", method="get")
+            button.logout Logout
+    // Main Content
+    main
+      // Portfolio Section
+      section.portfolio-container
+        h2 Our Portfolio
+        p Explore some of our latest projects and get inspired for your own space.
+        .portfolio-grid
+          // Living Room Design
+          .portfolio-item
+            img(src="assests/img/living-room.jpg", alt="Living Room Design")
+            h3 Living Room Design
+            p Modern living room design with a cozy feel.
+          // Bedroom Design
+          .portfolio-item
+            img(src="assests/img/bedroom.jpg", alt="Bedroom Design")
+            h3 Bedroom Design
+            p Elegant bedroom design with calming tones.
+          // Kitchen Design
+          .portfolio-item
+            img(src="assests/img/kitchen.jpg", alt="Kitchen Design")
+            h3 Kitchen Design
+            p Stylish kitchen with modern appliances.
+          // Dining Room Design
+          .portfolio-item
+            img(src="assests/img/dining.jpg", alt="Dining Room Design")
+            h3 Dining Room Design
+            p Contemporary dining space with an artistic touch.
+          // Office Design
+          .portfolio-item
+            img(src="assests/img/office.jpg", alt="Office Design")
+            h3 Office Design
+            p Minimalist office space that promotes productivity.
+          // Bathroom Design
+          .portfolio-item
+            img(src="assests/img/bathroom.jpg", alt="Bathroom Design")
+            h3 Bathroom Design
+            p Sleek bathroom with modern fixtures and clean lines.
+          // Kids Bedroom Design
+          .portfolio-item
+            img(src="assests/img/kids-room.jpg", alt="Kids Bedroom Design")
+            h3 Kids Bedroom Design
+            p Elegant and neat Kids Bedroom designs.
+          // Washing Room Design
+          .portfolio-item
+            img(src="assests/img/washing-room.jpg", alt="Washing Room Design")
+            h3 Washing Room Design
+            p Sleek Washing Room with modern fixtures and clean lines.
+          // Outdoor Patio Design
+          .portfolio-item
+            img(src="assests/img/balcony.jpg", alt="Outdoor Patio Design")
+            h3 Outdoor Patio Design
+            p Relaxing outdoor patio with comfortable seating.
+
+    // Footer
+    footer
+      .footer-container
+        // Column 1: Quick Links
+        .footer-column
+          h3 Quick Links
+          ul
+         a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+          form(action="/index", method="get")
+            button.logout Logout
+
+        // Column 2: Social Media Links
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#")
+              i.fab.fa-facebook
+            a(href="#")
+              i.fab.fa-twitter
+            a(href="#")
+              i.fab.fa-instagram
+
+        // Column 3: Newsletter Subscription
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Get the latest deals and offers directly in your inbox!
+          form(action="subscription.html", method="get")
+            input(type="email", name="email", placeholder="Enter your email", required)
+            button(type="submit") Subscribe
+
+      .copyright
+        p &copy; 2024 The Space Planner. All rights reserved.
+
+    script(src="assests/js/script.js")

@@ -1,0 +1,181 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Residential Design Services - The Space Planner
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+    link(rel="stylesheet" href="assests/css/styles.css")
+  body
+    header
+      .logo
+        img(src="assests/img/logo.png" alt="Company Logo")
+      h1.header-title The Space Planner
+      nav
+        ul 
+       a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+          form(action="/index", method="get")
+            button.logout Logout
+    // Main Content
+    main
+      section.services-container
+        h2 Our Residential Design Services
+        p At The Space Planner, we offer a wide range of residential design services to help you create the home of your dreams.
+
+        .services-grid
+          // Service 1: Full-Service Interior Design
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/full_service_interior.jpg" alt="Full-Service Interior Design")
+              h3 Full-Service Interior Design
+            p Comprehensive design services that cover all aspects of the interior, from concept to execution.
+
+          // Service 2: Space Planning
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/space_planning.jpg" alt="Space Planning")
+              h3 Space Planning
+            p Optimizing the layout of spaces to enhance functionality and flow in homes.
+
+          // Service 3: Color Consultation
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/color_consultation.jpg" alt="Color Consultation")
+              h3 Color Consultation
+            p Expert advice on color schemes for walls, furnishings, and accents.
+
+          // Service 4: Custom Furniture Design
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/custom_furniture.jpg" alt="Custom Furniture Design")
+              h3 Custom Furniture Design
+            p Creating unique furniture pieces tailored to fit specific spaces and styles.
+
+          // Service 5: Kitchen Design
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/kitchen.jpg" alt="Kitchen Design")
+              h3 Kitchen Design
+            p Designing functional and aesthetically pleasing kitchen spaces.
+
+          // Service 6: Bathroom Design
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/bathroom.jpg" alt="Bathroom Design")
+              h3 Bathroom Design
+            p Specializing in creating luxurious and functional bathrooms.
+
+          // Service 7: Lighting Design
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/lighting_design.jpg" alt="Lighting Design")
+              h3 Lighting Design
+            p Developing effective lighting plans to enhance mood and functionality.
+
+          // Service 8: Sustainable Design Solutions
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/sustainable_design.jpg" alt="Sustainable Design Solutions")
+              h3 Sustainable Design Solutions
+            p Incorporating eco-friendly materials and energy-efficient designs.
+
+          // Service 9: Home Staging
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/home_staging.jpg" alt="Home Staging")
+              h3 Home Staging
+            p Preparing homes for sale by enhancing their aesthetic appeal.
+
+          // Service 10: Landscape Design
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/landscape_design.jpg" alt="Landscape Design")
+              h3 Landscape Design
+            p Creating outdoor spaces that complement the home’s design.
+
+          // Service 11: Renovation and Remodeling
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/renovation_remodeling.jpg" alt="Renovation and Remodeling")
+              h3 Renovation and Remodeling
+            p Managing renovation projects to update or remodel existing spaces.
+
+          // Service 12: 3D Visualization Services
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/3d_visualization.jpg" alt="3D Visualization Services")
+              h3 3D Visualization Services
+            p Providing clients with 3D renderings of their spaces.
+
+          // Service 13: Decor and Accessories Selection
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/decor_accessories.jpg" alt="Decor and Accessories Selection")
+              h3 Decor and Accessories Selection
+            p Assisting clients in selecting decorative items to complete their design.
+
+          // Service 14: Home Office Design
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/home_office_design.jpg" alt="Home Office Design")
+              h3 Home Office Design
+            p Creating functional and inspiring home office spaces.
+
+          // Service 15: Smart Home Integration
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/smart_home_integration.jpg" alt="Smart Home Integration")
+              h3 Smart Home Integration
+            p Designing homes with integrated smart technologies for improved convenience.
+
+          // Service 16: Window Treatment Design
+          .service-item
+            .section(onclick="showPopup()")
+              img(src="assests/img/window_treatment_design.jpg" alt="Window Treatment Design")
+              h3 Window Treatment Design
+            p Designing and selecting custom window treatments to enhance aesthetics.
+
+    // Popup for Book Now
+    #popup.popup(style="display:none;")  // Set initial display to none
+      .popup-content
+        span.close(onclick="closePopup()") &times;
+        h2 If you want this design, book now!
+        button(onclick="redirectToBookNow()") Book now
+
+    // Footer (common across all pages)
+    footer
+      .footer-container
+        .footer-column
+          h3 Quick Links
+          ul
+           a(href="/account") My Account
+              a(href="/services") Services
+              a(href="/portfolio") Portfolio
+              a(href="/testimonials") Testimonials
+              a(href="/prices") Our Prices
+
+          form(action="/index", method="get")
+            button.logout Logout
+        .footer-column
+          h3 Follow Us
+          .social-icons
+            a(href="#") i.fab.fa-facebook
+            a(href="#") i.fab.fa-twitter
+            a(href="#") i.fab.fa-instagram
+
+        .footer-column.newsletter
+          h3 Subscribe to Our Newsletter
+          p Get the latest deals and offers directly in your inbox!
+          form(action="subscription.html" method="get")
+            input(type="email" name="email" placeholder="Enter your email" required)
+            button(type="submit") Subscribe
+
+      .copyright
+        p &copy; 2024 The Space Planner. All rights reserved.
+
+    script(src="assests/js/script.js")
