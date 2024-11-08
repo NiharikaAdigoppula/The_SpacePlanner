@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Space Planner</title>
+    <link rel="stylesheet" href="assests/css/style.css">
+    <link rel="stylesheet" href="assests/css/user.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="assests/img/logo.png" alt="The Space Planner Logo" class="logo">
+        </div>
+        <h1 class="site-title">The Space Planner</h1>
+        <nav>
+            <ul>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <form action="index.html" method="get"> <!-- Change 'profile.html' to your desired page -->
+                    <button class="logout">Logout</button>
+                </form>
+            </ul>
+        </nav>
+    </header>
+<body>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="welcome-container" id="welcomeContainer">
+            <h1>Welcome to SpacePlanner</h1>
+            <p>We specialize in interior designing. Select an option from the menu above to explore our services.</p>
+            <p>Your dream space is just a step away. Discover the latest trends and ideas in interior design.</p>
+            <form action="account.html" method="get"> <!-- Change 'profile.html' to your desired page -->
+                <button class="my account">Profile</button>
+            </form>
+        <form action="index.html" method="get"> <!-- Change 'profile.html' to your desired page -->
+            <button class="logout">Logout</button>
+        </form>
+        </div>
+    </div>
+
+    <script>
+        function loadContent() {
+            // Hide the welcome container
+            document.getElementById('welcomeContainer').style.display = 'none';
+            // Show the iframe
+            document.getElementById('contentFrame').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
+<footer>
+    <div class="footer-container">
+        <!-- Column 1: Quick Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="prices.html">Our Prices</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 2: Social Media Links -->
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Column 3: Newsletter Subscription -->
+        <div class="footer-column newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get the latest deals and offers directly in your inbox!</p>
+            <form action="subscription.html" method="get">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2024 The Space Planner. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="assests/js/script.js"></script>
+</body>
+</html>
